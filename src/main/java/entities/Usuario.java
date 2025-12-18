@@ -1,5 +1,5 @@
 package entities;
-
+import enums.TipoUsuario;
 //declara as variáveis
 public class Usuario{
     private int id;
@@ -49,7 +49,7 @@ public class Usuario{
     public void setTipo(TipoUsuario tipo){
         this.tipo=tipo;
     }
-    public void isAtivo(boolean Ativo){
+    public void setAtivo(boolean Ativo){
         this.ativo=ativo;
     }
 
