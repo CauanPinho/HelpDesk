@@ -40,28 +40,93 @@ public class Chamado{
         this.fechadoEm=null;
 
         //getters
-
+        //cadastro de pessoa
         public int getId(){
-            this.id=id;
+            return id;
         }
 
         public String getTitulo(){
-            this.titulo=titulo;
+            return titulo;
         }
 
         public Descrição getDescrição(){
-            this.descrição=descrição;
+            return descrição;
         }
+
+
+        //identificação de pessoa
         public StatusChamado getStatus(){
-            this.status=status;
+            return status;
         }
 
         public Categoria getCategoriaId(){
-            this.categoriaId=categoriaID;
+            return categoriaID;
         }
+
+
+
+        //tipo de usuario
         public Usuario getCLiente(){
-            this.cliente=cliente;
+            return cliente;
         }
+        public Usuario getResponsavel(){
+            return responsavel;
+        }
+
+        //Localdates
+
+        public LocalDateTime getCriadoem(){
+            return criadoEm;
+        }
+
+        public LocalDateTime getAtualizadoEm(){
+            return atualizadoEm;
+        }
+
+        public LocalDateTime getFechadoEm(){
+            return fechadoEm;
+        }
+
+        //SETTERS
+        public void setTItulo(int id){
+            this.titulo=titulo;
+            touch();
+        }
+
+        public void setDescrição(Descrição descrição){
+            this.descrição=descrição;
+            touch();
+        }
+        public void setCategoriaId(Categoria categoriaId){
+            this.categoriaId=categoriaId;
+        }
+
+        public void setStatus(StatusChamado status){
+            this.status=status;
+            touch();
+        }
+
+        public void setResponsavel (Usuario responsavel){
+            this.responsavel=responsavel;
+            touch();
+        }
+
+        public void setFechadoEm(LocalDateTime fechadoEm){
+            this.fechadoEm=fechadoEm;
+            touch();
+        }
+
+        //usar o private touch pra ficar atualizando todos
+
+        private void  touch(){
+            this.atualizadoEm=LocalDateTime.now()
+        }
+        
+
+
+
+
+
 
 
     }
